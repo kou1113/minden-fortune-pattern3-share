@@ -363,7 +363,7 @@ button, input { font: inherit; }
 .diary-lp .comic-script--ending { border-color: #d1b978; background: #fffaf0; }
 .diary-lp .comic-night-interlude { position: relative; min-height: 360px; margin: -18px 14px 8px; padding: 34px 18px 28px; overflow: hidden; border: 7px solid #fffdf8; color: #fff; background: radial-gradient(circle at 72% 22%, rgba(196,139,123,.25), transparent 28%), linear-gradient(155deg, #34252d, #171821 72%); box-shadow: 4px 9px 22px rgba(69,52,60,.2); }
 .diary-lp .comic-night-interlude::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; background: linear-gradient(transparent, rgba(6,7,12,.78)); }
-.diary-lp .comic-night-interlude__balloon { position: relative; z-index: 2; box-sizing: border-box; width: 78%; margin: 0 0 22px; padding: 17px 18px 15px 47px; border: 2px solid #342d32; border-radius: 48% / 38%; color: #332c30; background: #fff; font-family: var(--serif); font-size: 13px; line-height: 1.65; }
+.diary-lp .comic-night-interlude__balloon { position: relative; z-index: 2; box-sizing: border-box; width: 64%; margin: 0 0 26px; padding: 20px 20px 18px 50px; border: 2px solid #342d32; border-radius: 48% / 38%; color: #332c30; background: #fff; font-family: var(--serif); font-size: 16px; line-height: 1.45; }
 .diary-lp .comic-night-interlude__balloon::after { content: ""; position: absolute; bottom: -9px; left: 28px; width: 15px; height: 15px; border-right: 2px solid #342d32; border-bottom: 2px solid #342d32; background: #fff; transform: rotate(45deg); }
 .diary-lp .comic-night-interlude__balloon--right { margin-left: auto; }
 .diary-lp .comic-night-interlude__balloon--right::after { right: 28px; left: auto; }
@@ -375,46 +375,38 @@ button, input { font: inherit; }
 
 /* 漫画内吹き出し：ページごとに顔を避けて配置 */
 .diary-lp .comic-page > .comic-script { position: absolute; z-index: 8; inset: 7px; display: block; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; pointer-events: none; }
-.diary-lp .comic-page > .comic-script p { position: absolute; display: block; width: 38%; max-width: none; margin: 0; padding: 3.2% 4%; border: 2px solid rgba(48,42,46,.92); border-radius: 48% / 34%; color: #302b2e; background: rgba(255,255,255,.97); box-shadow: 1px 3px 7px rgba(38,29,34,.16); font-size: clamp(7.5px,2.3vw,10.5px); line-height: 1.55; text-align: center; }
+.diary-lp .comic-page > .comic-script p { position: absolute; display: block; width: 34%; max-width: none; margin: 0; padding: 3.5% 4%; border: 2px solid rgba(48,42,46,.92); border-radius: 48% / 34%; color: #302b2e; background: rgba(255,255,255,.98); box-shadow: 1px 3px 7px rgba(38,29,34,.16); font-size: clamp(13px,4vw,18px); font-weight: 700; line-height: 1.42; text-align: center; }
 .diary-lp .comic-page > .comic-script p::after { content: ""; position: absolute; bottom: -7px; left: 24px; width: 12px; height: 12px; border-right: 2px solid rgba(48,42,46,.92); border-bottom: 2px solid rgba(48,42,46,.92); background: #fff; transform: rotate(45deg); }
 .diary-lp .comic-page > .comic-script p:nth-child(even)::after { right: 24px; left: auto; }
-.diary-lp .comic-page > .comic-script b { position: static; display: block; margin-bottom: .25em; color: #9d6275; font-size: .72em; line-height: 1; text-align: center; }
+.diary-lp .comic-page > .comic-script b { position: static; display: block; margin-bottom: .35em; color: #9d6275; font-size: .62em; line-height: 1; letter-spacing: .08em; text-align: center; }
 .diary-lp .comic-page > .comic-script .comic-script__narration,
-.diary-lp .comic-page > .comic-script .comic-script__thought { width: 40% !important; padding: 2.8% 3% !important; border: 0 !important; border-left: 3px solid #a86b80 !important; border-radius: 0 !important; color: #554a50; background: rgba(255,251,246,.94) !important; box-shadow: 1px 3px 8px rgba(38,29,34,.13) !important; font-size: clamp(7.5px,2.2vw,10px); font-style: normal; text-align: center; }
+.diary-lp .comic-page > .comic-script .comic-script__thought { width: 40% !important; padding: 3% 3.5% !important; border: 0 !important; border-left: 4px solid #a86b80 !important; border-radius: 0 !important; color: #554a50; background: rgba(255,251,246,.96) !important; box-shadow: 1px 3px 8px rgba(38,29,34,.13) !important; font-size: clamp(12px,3.7vw,17px); font-style: normal; line-height: 1.45; text-align: center; }
 .diary-lp .comic-page > .comic-script .comic-script__narration::after,
 .diary-lp .comic-page > .comic-script .comic-script__thought::after { content: none; }
 
-#comic-page-01 .comic-script p:nth-child(1) { top: 17%; left: 31%; width: 39% !important; }
-#comic-page-01 .comic-script p:nth-child(2) { top: 77%; right: 3%; width: 35%; }
-#comic-page-01 .comic-script p:nth-child(3) { top: 85%; left: 3%; width: 37% !important; }
+#comic-page-01 .comic-script p:nth-child(1) { top: 3%; left: 15%; width: 48% !important; }
+#comic-page-01 .comic-script p:nth-child(2) { top: 50%; right: 2%; width: 28%; }
 
-#comic-page-02 .comic-script p:nth-child(1) { top: 27%; left: 3%; width: 34%; }
-#comic-page-02 .comic-script p:nth-child(2) { top: 39%; right: 3%; width: 42%; }
-#comic-page-02 .comic-script p:nth-child(3) { bottom: 3%; left: 3%; width: 40% !important; }
+#comic-page-02 .comic-script p:nth-child(1) { top: 3%; left: 3%; width: 34%; }
+#comic-page-02 .comic-script p:nth-child(2) { top: 49%; right: 3%; width: 34%; }
 
-#comic-page-03 .comic-script p:nth-child(1) { top: 17%; left: 33%; width: 34%; }
-#comic-page-03 .comic-script p:nth-child(2) { top: 42%; right: 3%; width: 32%; }
-#comic-page-03 .comic-script p:nth-child(3) { top: 66%; left: 3%; width: 38%; }
-#comic-page-03 .comic-script p:nth-child(4) { right: 3%; bottom: 3%; width: 40% !important; }
+#comic-page-03 .comic-script p:nth-child(1) { top: 3%; left: 3%; width: 34%; }
+#comic-page-03 .comic-script p:nth-child(2) { top: 53%; right: 3%; width: 32%; }
 
-#comic-page-04 .comic-script p:nth-child(1) { top: 33%; right: 2%; width: 36%; }
-#comic-page-04 .comic-script p:nth-child(2) { top: 43%; left: 3%; width: 39%; }
-#comic-page-04 .comic-script p:nth-child(3) { right: 3%; bottom: 3%; width: 42% !important; }
+#comic-page-04 .comic-script p:nth-child(1) { top: 3%; right: 3%; width: 34%; }
+#comic-page-04 .comic-script p:nth-child(2) { bottom: 3%; left: 2%; width: 36% !important; }
 
-#comic-page-05 .comic-script p:nth-child(1) { top: 17%; right: 3%; width: 43% !important; }
-#comic-page-05 .comic-script p:nth-child(2) { bottom: 3%; left: 3%; width: 43% !important; }
+#comic-page-05 .comic-script p:nth-child(1) { top: 3%; right: 2%; width: 23% !important; }
 
-#comic-page-06 .comic-script p:nth-child(1) { top: 3%; left: 3%; width: 50%; }
-#comic-page-06 .comic-script p:nth-child(2) { top: 29%; left: 3%; width: 54%; }
-#comic-page-06 .comic-script p:nth-child(3) { top: 54%; left: 3%; width: 54%; }
+#comic-page-06 .comic-script p:nth-child(1) { top: 11%; left: 4%; width: 42%; }
+#comic-page-06 .comic-script p:nth-child(2) { top: 60%; left: 4%; width: 44%; }
 
-#comic-page-07 .comic-script p:nth-child(1) { top: 31%; left: 3%; width: 40% !important; }
-#comic-page-07 .comic-script p:nth-child(2) { top: 64%; left: 2%; width: 44%; }
-#comic-page-07 .comic-script p:nth-child(3) { top: 64%; right: 2%; bottom: auto; width: 44%; }
+#comic-page-07 .comic-script p:nth-child(1) { top: 2%; left: 31%; width: 38% !important; }
+#comic-page-07 .comic-script p:nth-child(2) { top: 66%; left: 2%; width: 30%; }
+#comic-page-07 .comic-script p:nth-child(3) { top: 66%; right: 2%; width: 32%; }
 
-#comic-page-08 .comic-script p:nth-child(1) { top: 4%; right: 3%; width: 43%; }
-#comic-page-08 .comic-script p:nth-child(2) { top: 56%; left: 3%; width: 40% !important; }
-#comic-page-08 .comic-script p:nth-child(3) { right: 3%; bottom: 3%; width: 42% !important; }
+#comic-page-08 .comic-script p:nth-child(1) { top: 3%; right: 2%; width: 32%; }
+#comic-page-08 .comic-script p:nth-child(2) { top: 52%; left: 2%; width: 38% !important; }
 .diary-lp .manga-ending { margin: 48px 14px 0; padding: 34px 20px 42px; border: 1px dashed #cbb9ae; color: #4e474d; background: rgba(255,250,241,.78); transform: rotate(.2deg); }
 .diary-lp .manga-ending > p, .diary-lp .manga-ending > strong { font-family: var(--hand); }
 .diary-lp .manga-ending > strong { color: #4b4148; }
