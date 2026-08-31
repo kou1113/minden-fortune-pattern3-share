@@ -523,9 +523,9 @@ button, input { font: inherit; }
 .diagnosis-progress__meta b { color: rgba(255,255,255,.8); font-size: 11px; }
 .diagnosis-progress__meta i { color: #f1d4de; font-size: 17px; font-style: normal; }
 .diagnosis-progress__bar { height: 4px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.12); }
-.diagnosis-progress__bar > span { width: 16.666%; height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #d9b778, #eab7ca); box-shadow: 0 0 12px rgba(234,183,202,.55); transition: width .4s ease; }
-.diagnosis-progress__symbols { display: grid; grid-template-columns: repeat(6, 1fr); margin-top: 8px; color: rgba(255,255,255,.22); text-align: center; }
-.diagnosis-progress__symbols i { font-size: 12px; font-style: normal; transition: color .3s ease, transform .3s ease; }
+.diagnosis-progress__bar > span { width: 10%; height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #d9b778, #eab7ca); box-shadow: 0 0 12px rgba(234,183,202,.55); transition: width .4s ease; }
+.diagnosis-progress__symbols { display: grid; grid-template-columns: repeat(10, 1fr); margin-top: 8px; color: rgba(255,255,255,.22); text-align: center; }
+.diagnosis-progress__symbols i { font-size: 10px; font-style: normal; transition: color .3s ease, transform .3s ease; }
 .diagnosis-progress__symbols i.is-complete { color: #edc7d4; transform: scale(1.22); }
 .diagnosis-question {
   position: relative;
@@ -551,16 +551,20 @@ button, input { font: inherit; }
 .diagnosis-question__icon { position: absolute; top: 24px; right: 26px; color: #b68a9e; font-family: Georgia, serif; font-size: 18px; font-style: normal; }
 .diagnosis-question p { position: relative; z-index: 1; margin: 0; font-family: var(--hand); font-size: 18px; line-height: 2; }
 .diagnosis-question strong { color: #915f76; font-size: 20px; font-weight: 700; background: linear-gradient(transparent 72%, rgba(226,190,204,.42) 0); }
-.diagnosis-actions { display: grid; grid-template-columns: 1.05fr .95fr; gap: 9px; margin-top: 17px; }
-.diagnosis-actions button { min-height: 61px; padding: 9px 8px; border-radius: 8px; font-size: 12px; font-weight: 700; line-height: 1.45; cursor: pointer; transition: transform .16s ease, filter .16s ease; }
-.diagnosis-actions button:first-child { border: 1px solid #d29caf; color: #fff; background: linear-gradient(115deg, #9d6078, #c07f97); box-shadow: 0 8px 19px rgba(13,10,25,.18); }
-.diagnosis-actions button:last-child { border: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.75); background: rgba(255,255,255,.07); }
+.diagnosis-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 17px; }
+.diagnosis-actions button { min-height: 57px; padding: 9px 7px; border: 1px solid rgba(255,255,255,.28); border-radius: 9px; color: rgba(255,255,255,.82); background: rgba(255,255,255,.07); font-size: 11px; font-weight: 700; line-height: 1.45; cursor: pointer; transition: transform .16s ease, filter .16s ease, box-shadow .16s ease; }
+.diagnosis-actions button[data-score="3"] { border-color: #d7a3b5; color: #fff; background: linear-gradient(115deg, #955a73, #c67f99); box-shadow: 0 8px 19px rgba(13,10,25,.2); }
+.diagnosis-actions button[data-score="2"] { border-color: rgba(224,178,197,.6); background: rgba(190,117,148,.27); }
+.diagnosis-actions button[data-score="1"] { background: rgba(255,255,255,.095); }
+.diagnosis-actions button[data-score="0"] { color: rgba(255,255,255,.62); background: rgba(20,19,40,.28); }
 .diagnosis-actions button span { margin-right: 5px; font-size: 14px; }
 .diagnosis-actions button:hover { transform: translateY(-2px); filter: brightness(1.07); }
 .diagnosis-actions button:active { transform: scale(.98); }
 .diagnosis-actions button:disabled { cursor: default; filter: none; opacity: .72; }
-.diagnosis-question.is-answered[data-choice="yes"] { box-shadow: 0 22px 44px rgba(8,8,21,.28), inset 0 0 0 8px rgba(255,255,255,.55), 0 0 0 3px rgba(227,174,197,.28); transform: scale(.985); }
-.diagnosis-question.is-answered[data-choice="no"] { opacity: .82; transform: scale(.985); }
+.diagnosis-question.is-answered[data-choice="3"],
+.diagnosis-question.is-answered[data-choice="2"] { box-shadow: 0 22px 44px rgba(8,8,21,.28), inset 0 0 0 8px rgba(255,255,255,.55), 0 0 0 3px rgba(227,174,197,.28); transform: scale(.985); }
+.diagnosis-question.is-answered[data-choice="1"],
+.diagnosis-question.is-answered[data-choice="0"] { opacity: .82; transform: scale(.985); }
 
 .diagnosis-loading { min-height: 470px; display: grid; align-content: center; justify-items: center; text-align: center; animation: diagnosis-fade-up .35s ease both; }
 .diagnosis-loading__cards { position: relative; width: 96px; height: 126px; margin-bottom: 33px; }
@@ -576,6 +580,7 @@ button, input { font: inherit; }
 .diagnosis-result__card { position: relative; padding: 36px 23px 28px; overflow: hidden; border: 1px solid #dcc4cf; border-radius: 14px; color: #4d4048; background: linear-gradient(145deg, #fffaf1, #f9e9ed); box-shadow: 0 22px 48px rgba(8,8,21,.32), inset 0 0 0 7px rgba(255,255,255,.55); }
 .diagnosis-result__card::before { content: ""; position: absolute; width: 190px; height: 190px; top: -105px; right: -90px; border: 1px solid rgba(168,108,137,.13); border-radius: 50%; }
 .diagnosis-result__moon { width: 58px; height: 58px; display: grid; place-items: center; margin: 0 auto 14px; border: 1px solid #d4ae77; border-radius: 50%; color: #a36a82; background: #fff8e8; box-shadow: 0 0 0 6px rgba(212,174,119,.1); font-family: Georgia, serif; font-size: 27px; }
+.diagnosis-result__code { display: inline-block; margin-bottom: 8px; padding: 3px 10px; border: 1px solid rgba(158,103,128,.28); border-radius: 999px; color: #936177; background: rgba(255,255,255,.62); font-family: Georgia, serif; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
 .diagnosis-result__card > p:not(.diagnosis-result__description) { margin: 0; color: #8e6575; font-family: var(--hand); font-size: 13px; }
 .diagnosis-result__card h3 { margin: 3px 0 15px; color: #573b4b; font-family: var(--hand); font-size: 25px; line-height: 1.55; }
 .diagnosis-result__line { display: flex; align-items: center; gap: 9px; margin: 0 auto 19px; color: #b18456; }
@@ -583,6 +588,16 @@ button, input { font: inherit; }
 .diagnosis-result__line::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #d2b178); }
 .diagnosis-result__line::after { background: linear-gradient(90deg, #d2b178, transparent); }
 .diagnosis-result__description { margin: 0; color: #655b61; font-size: 13px; line-height: 1.9; text-align: left; }
+.diagnosis-result__traits { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 17px; }
+.diagnosis-result__traits span { padding: 5px 10px; border-radius: 999px; color: #855d70; background: #f2dfe6; font-size: 10px; font-weight: 700; }
+.diagnosis-result__profile { margin-top: 22px; padding: 17px 15px 15px; border: 1px solid rgba(184,143,159,.32); background: rgba(255,255,255,.52); text-align: left; }
+.diagnosis-result__profile > small { display: block; margin-bottom: 12px; color: #895f71; font-size: 10px; font-weight: 700; }
+.diagnosis-result__profile > div { display: grid; gap: 9px; }
+.diagnosis-axis { display: grid; grid-template-columns: 72px 1fr 35px; gap: 7px; align-items: center; }
+.diagnosis-axis > span { color: #66575f; font-size: 10px; }
+.diagnosis-axis > i { height: 7px; overflow: hidden; border-radius: 999px; background: #e8d9df; }
+.diagnosis-axis > i b { height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #b47790, #dfb58c); }
+.diagnosis-axis > em { color: #906879; font-family: Georgia, serif; font-size: 10px; font-style: normal; text-align: right; }
 .diagnosis-result__topics { margin-top: 23px; padding: 17px 17px 14px; border: 1px dashed #d1aebb; background: rgba(255,255,255,.62); text-align: left; }
 .diagnosis-result__topics small { display: block; margin: 0 0 8px; color: #916275; font-size: 10px; font-weight: 700; }
 .diagnosis-result__topics ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
