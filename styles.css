@@ -328,7 +328,7 @@ button, input { font: inherit; }
 .diary-lp .article-body { display: flex; flex-direction: column; padding-top: 42px; background-color: #fffaf1; background-image: linear-gradient(90deg, transparent 13px, rgba(190,113,126,.22) 13px, rgba(190,113,126,.22) 14px, transparent 14px), repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(111,133,156,.095) 31px, rgba(111,133,156,.095) 32px); }
 .diary-lp .section-label { display: inline-block; margin-bottom: 12px; padding: 3px 10px 2px; color: #855d63; background: #f1dfc8; box-shadow: 2px 2px 0 rgba(128,91,98,.12); font-family: var(--hand); font-size: 11px; font-weight: 700; letter-spacing: .03em; transform: rotate(-1.2deg); }
 .diary-lp .answer-section { margin-bottom: 54px; }
-.diary-lp .answer-section > h2 { font-family: var(--hand); font-size: 27px; line-height: 1.7; }
+.diary-lp .answer-section > h2 { font-family: var(--hand); font-size: 27px; line-height: 1.7; text-align: center; }
 .diary-lp .answer-lead { position: relative; border: 1px solid #dfd2c8; border-left: 1px solid #dfd2c8; background: rgba(255,255,255,.83); box-shadow: 3px 5px 14px rgba(80,63,70,.09); transform: rotate(-.25deg); }
 .diary-lp .answer-lead::before, .diary-lp .experience-story::before, .diary-lp .quick-proof-section::before, .diary-lp .service-section::before, .diary-lp .final-cta::before { content: ""; position: absolute; z-index: 3; top: -10px; left: 50%; width: 72px; height: 20px; background: rgba(225,203,168,.7); box-shadow: 0 1px 2px rgba(70,55,50,.08); transform: translateX(-50%) rotate(-2deg); }
 .diary-lp .answer-lead strong { font-family: var(--hand); }
