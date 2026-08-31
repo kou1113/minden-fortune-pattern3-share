@@ -409,8 +409,8 @@ button, input { font: inherit; }
 #comic-page-06 .comic-script p:nth-child(3) { top: 54%; left: 3%; width: 54%; }
 
 #comic-page-07 .comic-script p:nth-child(1) { top: 31%; left: 3%; width: 40% !important; }
-#comic-page-07 .comic-script p:nth-child(2) { top: 58%; left: 29%; width: 42%; }
-#comic-page-07 .comic-script p:nth-child(3) { right: 3%; bottom: 3%; width: 42%; }
+#comic-page-07 .comic-script p:nth-child(2) { top: 64%; left: 2%; width: 44%; }
+#comic-page-07 .comic-script p:nth-child(3) { top: 64%; right: 2%; bottom: auto; width: 44%; }
 
 #comic-page-08 .comic-script p:nth-child(1) { top: 4%; right: 3%; width: 43%; }
 #comic-page-08 .comic-script p:nth-child(2) { top: 56%; left: 3%; width: 40% !important; }
